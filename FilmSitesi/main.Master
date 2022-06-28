@@ -1,0 +1,160 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="FilmSitesi.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="icon" href="/images/logo.ico" type="image/x-icon"/>
+    <title>Kafan Göre Film</title>
+    
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <link href="Style.css" rel="stylesheet" />
+    <script type="text/javascript">
+        $("document").ready(function () {
+            $("header nav ul li.filmler-wrap").mouseover(function () {
+                $("header nav ul li.filmler-wrap .filmler").css("display", "block")
+            })
+            $("header nav ul li.filmler-wrap").mouseleave(function () {
+                $("header nav ul li.filmler-wrap .filmler").css("display", "none")
+            })
+        })
+        $("document").ready(function () {
+            $("header nav ul li.yonetmenler-wrap").mouseover(function () {
+                $("header nav ul li.yonetmenler-wrap .yonetmenler").css("display", "block")
+            })
+            $("header nav ul li.yonetmenler-wrap").mouseleave(function () {
+                $("header nav ul li.yonetmenler-wrap .yonetmenler").css("display", "none")
+            })
+        })
+        $("document").ready(function () {
+            $("header nav ul li.oyuncular-wrap").mouseover(function () {
+                $("header nav ul li.oyuncular-wrap .oyuncular").css("display", "block")
+            })
+            $("header nav ul li.oyuncular-wrap").mouseleave(function () {
+                $("header nav ul li.oyuncular-wrap .oyuncular").css("display", "none")
+            })
+        })
+    </script> 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+       <div id="wrapper">
+
+            <header>
+
+                <div class="logo">
+                    
+                </div>
+
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="/">Anasayfa</a>
+                        </li>
+                        <li class="filmler-wrap">
+                            Filmler
+                            <div class="filmler">
+                                <ul>
+                                    <li><a href="/filmKategori/biyografi.aspx">Biyografi</a></li>
+                                    <li><a href="/filmKategori/dram.aspx">Dram</a></li>
+                                    <li><a href="/filmKategori/gerilim.aspx">Gerilim</a></li>
+                                    <li><a href="/filmKategori/gizem.aspx">Gizem</a></li>
+                                    <li><a href="/filmKategori/korku.aspx">Korku</a></li>
+                                    <li><a href="/filmKategori/suc.aspx">Suç</a></li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="yonetmenler-wrap">
+                            Yönetmenler
+                            <div class="yonetmenler">
+                                <ul>
+                                    <li><a href="/yonetmenler/burton.aspx">Tim Burton</a></li>
+                                    <li><a href="/yonetmenler/nolan.aspx">Christopher Nolan</a></li>
+                                    <li><a href="/yonetmenler/tarantino.aspx">Quentin Tarantino</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="oyuncular-wrap">
+                            Oyuncular
+                            <div class="oyuncular">
+                                <ul>
+                                    <li><a href="/oyuncular/depp.aspx">Johnny Depp</a></li>
+                                    <li><a href="/oyuncular/carrey.aspx">Jim Carrey</a></li>
+                                    <li><a href="/oyuncular/downey.aspx">Robert Downey Jr.</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+              
+            </header>
+
+            <div class="banner">
+                
+            </div>
+
+            <div class="sol-taraf">
+
+                <div class="kayit">
+
+                    <asp:Panel ID="pnlGiris" runat="server">
+
+                    <div class="ust">
+                        Kullanıcı Girişi
+                    </div>
+                    <div class="alt">
+                        <div class="kullanici">
+                        <span>KullanıcıAdı</span>
+                        <asp:TextBox ID="txtKullaniciAdi" CssClass="textbox" runat="server" />
+
+                        </div>
+                        <div class="sifre">
+                        <span>Şifre</span>
+                        <asp:TextBox ID="txtSifre" CssClass="textbox" runat="server" TextMode="Password" />  
+                        </div>
+                        <a href="/Kaydol.aspx" class="btnKayit">Kaydet</a>
+                        <asp:Button ID="btnGiris" CssClass="btnGiris" Text="Giriş" runat="server" OnClick="btnGiris_Click"/>
+                        <asp:Label ID="lblSonuc" Text="" runat="server"></asp:Label>
+                    </div>
+                        </asp:Panel>
+                    <asp:Panel ID="pnlKullanici" runat="server" CssClass="pnlKullanici">
+
+                        Hoşgeldin, <asp:Label ID="lblKullaniciAdi" Text ="" runat="server" />
+                        <br />
+                        <asp:Button ID="btnCikis" Text="Çıkış" runat="server" OnClick="btnCikis_Click" CssClass="KullaniciCikisi"/>
+                        </asp:Panel>
+                </div>             
+               
+                <div class="filmHaberleri">
+                    <div class="ust">
+                        Film Haberleri
+                    </div>
+                     <div class="alt">
+                         <asp:ListView ID="lstHaber" runat="server">
+                             <ItemTemplate>
+                                 <div class="haber-wrap">
+                             <asp:Label Text='<%#Eval("Baslik")%>' runat="server" /><br />
+                             <asp:Label Text='<%#Eval("Haber")%>' runat="server" /><br />
+                             <asp:Label Text='<%#Eval("Tarih")%>' runat="server" />
+                         </div>
+                             </ItemTemplate>
+                         </asp:ListView>                        
+                    </div>
+                </div>
+            </div>
+            <div class="icerik">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+            <footer>
+                Web Tas Dersi Ödevidir.
+            </footer>
+        </div>      
+    </form>
+</body>
+</html>

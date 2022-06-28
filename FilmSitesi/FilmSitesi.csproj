@@ -1,0 +1,362 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.props" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5A17E61E-AFEB-462F-8829-400AF06E2040}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FilmSitesi</RootNamespace>
+    <AssemblyName>FilmSitesi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44395</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="filmEkranlari\filmEkrani13.aspx" />
+    <Content Include="filmKategori\biyografi.aspx" />
+    <Content Include="images\burton1.jpg" />
+    <Content Include="images\burton2.jpg" />
+    <Content Include="images\burton3.jpg" />
+    <Content Include="images\burton4.jpg" />
+    <Content Include="images\carrey.jpg" />
+    <Content Include="images\carrey2.jpg" />
+    <Content Include="images\carrey4.jpg" />
+    <Content Include="images\carrey5.jpg" />
+    <Content Include="images\depp.jpg" />
+    <Content Include="images\depp1.jpg" />
+    <Content Include="images\depp2.jpg" />
+    <Content Include="images\depp3.jpg" />
+    <Content Include="images\downey.jpg" />
+    <Content Include="images\downey1.jpg" />
+    <Content Include="images\downey2.jpg" />
+    <Content Include="images\downey3.jpg" />
+    <Content Include="images\indir %281%29.jpg" />
+    <Content Include="images\korku.jpg" />
+    <Content Include="images\logo.ico" />
+    <Content Include="images\mutlu.jpg" />
+    <Content Include="images\nolan.jpg" />
+    <Content Include="images\nolan1.jpg" />
+    <Content Include="images\nolan2.jpg" />
+    <Content Include="images\nolan3.jpg" />
+    <Content Include="images\sinirli.jpg" />
+    <Content Include="images\taran1.jpg" />
+    <Content Include="images\taran2.jpg" />
+    <Content Include="images\taran3.jpg" />
+    <Content Include="images\tarantino.jpg" />
+    <Content Include="images\üzgün.jpg" />
+    <Content Include="images\şok.jpg" />
+    <Content Include="oyuncular\carrey.aspx" />
+    <Content Include="oyuncular\depp.aspx" />
+    <Content Include="oyuncular\downey.aspx" />
+    <Content Include="videos\carrey.mp4" />
+    <Content Include="videos\depp.mp4" />
+    <Content Include="videos\downey.mp4" />
+    <Content Include="videos\nolan.mp4" />
+    <Content Include="videos\tarantino.mp4" />
+    <Content Include="yonetmenler\burton.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="filmKategori\dram.aspx" />
+    <Content Include="filmEkranlari\filmEkrani.aspx" />
+    <Content Include="filmEkranlari\filmEkrani11.aspx" />
+    <Content Include="filmEkranlari\filmEkrani3.aspx" />
+    <Content Include="filmEkranlari\filmEkrani7.aspx" />
+    <Content Include="filmEkranlari\filmEkrani8.aspx" />
+    <Content Include="filmEkranlari\filmEkrani9.aspx" />
+    <Content Include="filmKategori\gerilim.aspx" />
+    <Content Include="filmKategori\gizem.aspx" />
+    <Content Include="images\12kızgınadam.jpg" />
+    <Content Include="images\285656_movie_icon.png" />
+    <Content Include="images\akıl.jpg" />
+    <Content Include="images\banner.png" />
+    <Content Include="images\cinnet.jpg" />
+    <Content Include="images\get.jpeg" />
+    <Content Include="images\kar.jpg" />
+    <Content Include="images\leon.jpeg" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\logo2.png" />
+    <Content Include="images\mak.jpg" />
+    <Content Include="images\mandela.jpg" />
+    <Content Include="images\oto.jpg" />
+    <Content Include="images\seans.jpg" />
+    <Content Include="images\ucuz.jpg" />
+    <Content Include="images\yüz.jpeg" />
+    <Content Include="Kaydol.aspx" />
+    <Content Include="filmKategori\korku.aspx" />
+    <Content Include="Style.css" />
+    <Content Include="filmKategori\suc.aspx" />
+    <Content Include="videos\burton.mp4" />
+    <Content Include="Web.config" />
+    <Content Include="yonetmenler\nolan.aspx" />
+    <Content Include="yonetmenler\tarantino.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="filmEkranlari\filmEkrani13.aspx.cs">
+      <DependentUpon>filmEkrani13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani13.aspx.designer.cs">
+      <DependentUpon>filmEkrani13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmKategori\biyografi.aspx.cs">
+      <DependentUpon>biyografi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmKategori\biyografi.aspx.designer.cs">
+      <DependentUpon>biyografi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="oyuncular\carrey.aspx.cs">
+      <DependentUpon>carrey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="oyuncular\carrey.aspx.designer.cs">
+      <DependentUpon>carrey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="oyuncular\depp.aspx.cs">
+      <DependentUpon>depp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="oyuncular\depp.aspx.designer.cs">
+      <DependentUpon>depp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="oyuncular\downey.aspx.cs">
+      <DependentUpon>downey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="oyuncular\downey.aspx.designer.cs">
+      <DependentUpon>downey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetmenler\burton.aspx.cs">
+      <DependentUpon>burton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetmenler\burton.aspx.designer.cs">
+      <DependentUpon>burton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmKategori\dram.aspx.cs">
+      <DependentUpon>dram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmKategori\dram.aspx.designer.cs">
+      <DependentUpon>dram.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani.aspx.cs">
+      <DependentUpon>filmEkrani.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani.aspx.designer.cs">
+      <DependentUpon>filmEkrani.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani11.aspx.cs">
+      <DependentUpon>filmEkrani11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani11.aspx.designer.cs">
+      <DependentUpon>filmEkrani11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani3.aspx.cs">
+      <DependentUpon>filmEkrani3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani3.aspx.designer.cs">
+      <DependentUpon>filmEkrani3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani7.aspx.cs">
+      <DependentUpon>filmEkrani7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani7.aspx.designer.cs">
+      <DependentUpon>filmEkrani7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani8.aspx.cs">
+      <DependentUpon>filmEkrani8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani8.aspx.designer.cs">
+      <DependentUpon>filmEkrani8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani9.aspx.cs">
+      <DependentUpon>filmEkrani9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmEkranlari\filmEkrani9.aspx.designer.cs">
+      <DependentUpon>filmEkrani9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmKategori\gerilim.aspx.cs">
+      <DependentUpon>gerilim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmKategori\gerilim.aspx.designer.cs">
+      <DependentUpon>gerilim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmKategori\gizem.aspx.cs">
+      <DependentUpon>gizem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmKategori\gizem.aspx.designer.cs">
+      <DependentUpon>gizem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kaydol.aspx.cs">
+      <DependentUpon>Kaydol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kaydol.aspx.designer.cs">
+      <DependentUpon>Kaydol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="filmKategori\korku.aspx.cs">
+      <DependentUpon>korku.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmKategori\korku.aspx.designer.cs">
+      <DependentUpon>korku.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="main.Master.cs">
+      <DependentUpon>main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="main.Master.designer.cs">
+      <DependentUpon>main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="filmKategori\suc.aspx.cs">
+      <DependentUpon>suc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="filmKategori\suc.aspx.designer.cs">
+      <DependentUpon>suc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetmenler\nolan.aspx.cs">
+      <DependentUpon>nolan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetmenler\nolan.aspx.designer.cs">
+      <DependentUpon>nolan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yonetmenler\tarantino.aspx.cs">
+      <DependentUpon>tarantino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yonetmenler\tarantino.aspx.designer.cs">
+      <DependentUpon>tarantino.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="movies\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51494</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44395/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.targets" Condition="Exists('..\packages\Microsoft.TypeScript.MSBuild.4.6.4\build\Microsoft.TypeScript.MSBuild.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

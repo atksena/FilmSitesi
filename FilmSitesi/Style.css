@@ -1,0 +1,330 @@
+﻿body {
+    background-color :#A2D5AB;
+    font-family:"Trebuchet MS",Arial,"Comic Sans MS";
+}
+
+*{
+    margin: 0;
+    padding:0;
+    border:0;
+    font-family: sans-serif;
+    text-align:justify;
+    list-style:none;
+}
+
+a{
+    text-decoration:none;
+    color:#555;
+}
+
+a:hover {
+    color: #999;
+}
+
+#wrapper{
+    width : 960px;
+    height:auto;
+    margin: 0 auto;
+}
+header {
+    float: left;
+    width: 100%;
+    height: 60px;
+    background-color: #E5EFC1;
+}
+    header .logo {
+        float: left;
+        width: 89px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        background-image:url('images/logo.ico');
+        background-size: cover;
+    }
+    header nav{
+        float:left;
+        width:609px;
+        height:60px;
+        line-height:60px;
+    }  
+        header nav ul{
+            list-style:none;
+         }
+
+            header nav ul li {
+              float:left;
+              margin: 0 40px;
+              color:#555;
+              cursor:default;
+            }
+
+                header nav ul li.filmler-wrap{
+                   position:relative;
+                }
+
+                    header nav ul li.filmler-wrap .filmler {
+                        display: none;
+                        position: absolute;
+                        width: auto;
+                        height: auto;
+                        background-color: #E5EFC1;
+                    }
+                header nav ul li.yonetmenler-wrap {
+                    position: relative;
+                }
+
+                    header nav ul li.yonetmenler-wrap .yonetmenler {
+                        display: none;
+                        position: absolute;
+                        width: 230px;
+                        height: auto;
+                        background-color: #E5EFC1;
+                    }
+                header nav ul li.oyuncular-wrap {
+                    position: relative;
+                }
+
+                    header nav ul li.oyuncular-wrap .oyuncular {
+                        display: none;
+                        position: absolute;
+                        width: 230px;
+                        height: auto;
+                        background-color: #E5EFC1;
+                    }
+
+.banner {
+    float: left;
+    margin-top: 45px;
+    width: 960px;
+    height: 360px;
+    line-height: 360px;
+    text-align: center;
+    font-size: 56px;
+    color: #E5EFC1;
+    background-image: url('/images/banner.png');
+    background-size: cover;
+}
+
+.sol-taraf {
+    float: left;
+    width: 285px;
+    height: auto;
+    margin-top: 45px;
+
+}
+
+    .sol-taraf .kayit {
+        float: left;
+        width: 285px;
+        height: auto;
+        
+    }
+        .sol-taraf .kayit .ust {
+            float: left;
+            width: 270px;
+            height: 44px;
+            line-height: 44px;
+            padding-left: 15px;
+            border-bottom: 1px solid #ccc;
+            color: #555;
+            background-color: #E5EFC1;
+            border-radius: 1000px;
+        }
+        .sol-taraf .kayit .alt {
+            float: left;
+            width: 250px;
+            padding: 17.5px;
+            height: 190px;
+            border-bottom: 1px solid #ccc;
+            color: #555;
+            background-color: #E5EFC1;
+            border-radius: 15px;
+        }
+            .sol-taraf .kayit .alt .sifre {
+                margin-top: 15px;
+                background-color: #E5EFC1;
+            }
+            .sol-taraf .kayit .alt .textbox {
+                width: 228px;
+                padding: 10px;
+                height: 18px;
+                border: 1px solid #ccc;
+                background-color: #E5EFC1;
+                border-radius: 75px;
+            }
+            .sol-taraf .kayit .alt .btnKayit {
+                float: left;
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #555;
+                cursor: pointer;
+                margin-top: 10px;
+                border-radius: 100px;
+                background-color: #E5EFC1;
+            }
+                .sol-taraf .kayit .alt .btnKayit:hover {
+                    background-color: #efd2af;
+                }
+            .sol-taraf .kayit .alt .btnGiris {
+                float: right;
+                width: 100px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #555;
+                cursor: pointer;
+                margin-top: 10px;
+                background-color: #E5EFC1;
+                border-radius: 100px;
+            }
+            .sol-taraf .kayit .alt .btnGiris:hover {
+                background-color: #efd2af;
+            }
+.pnlKullanici {
+    width: 250px;
+    background-color: #E5EFC1;
+    padding: 15px;
+    color: #555;
+}
+.KullaniciCikisi {
+    float: left;
+    width: 100px;
+    height: 30px;
+    line-height: 40px;
+    text-align: center;
+    margin-top: 10px;
+    background-color: #E5EFC1;
+    cursor: pointer;
+    color: #555;
+    border-radius: 100px;
+}
+
+
+.sol-taraf .filmHaberleri {
+    float: left;
+    width: 285px;
+    height: 700px;
+    margin-top: 45px;
+    background-color: #E5EFC1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+    .sol-taraf .filmHaberleri .ust {
+        float: left;
+        width: 270px;
+        height: 44px;
+        line-height: 44px;
+        padding-left: 15px;
+        border-bottom: 1px solid #ccc;
+        color: #555;
+        background-color: #E5EFC1;
+    }
+
+    .sol-taraf .filmHaberleri .alt {
+        float: left;
+        width: 250px;
+        padding: 17.5px;
+        height: 700px;
+        border-bottom: 1px solid #ccc;
+        color: #555;
+        background-color: #E5EFC1;
+    }
+        .sol-taraf .filmHaberleri .alt .haber-wrap {
+            float: left;
+            height: auto;
+            width: 100%;
+            background-color: #E5EFC1;
+            margin: 10px 0;
+        }
+                .sol-taraf .filmHaberleri .alt .haber-wrap:hover{
+                   background-color:#f8d473;
+                 }
+
+
+
+.icerik {
+    float: right;
+    width: 625px;
+    height: 1050px;
+    margin-top: 45px;
+    background-color: #E5EFC1;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width:14px;
+}
+::-webkit-scrollbar-thumb {
+    background: #E5EFC1;
+    border-radius: 12px;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    height: 60px;
+    margin-top: 45px;
+    background-color: #E5EFC1;
+    text-align: center;
+    line-height: 60px;
+    color: #555;
+    border-radius: 100px;
+}
+
+.cerceve {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+    align-content:center;
+    padding-left:80px;
+    margin:0 auto;
+}
+.galeri {
+    position:relative;
+    width: 400%;
+    height: 300px;
+    left:0%;
+    animation: 10s slayt infinite;
+    margin:0 auto;
+}
+
+@keyframes slayt{
+    
+    0%{
+        left:0%;
+
+    }
+    20% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    90% {
+        left: -300%;
+    }
+}
+
+.galeri img{
+    width:25%;
+    float:left;
+}
